@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunker Top - Recomendaciones de Productos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados (copiados de tu HTML) -->
+    <style>
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #000 !important;
+        }
+        .navbar-custom {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        .nav-item {
+            margin: 0 10px;
+            position: relative;
+        }
+        .nav-link {
+            color: #000000 !important;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 10px 0;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: #555555 !important;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #888888;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .navbar-nav {
+            margin: 0 auto;
+        }
+        .active .nav-link {
+            color: #555555 !important;
+        }
+        .active .nav-link::after {
+            width: 100%;
+        }
+        .product-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 20px;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .section-container {
+            display: none;
+        }
+        .section-container.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bunker Top</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" data-section="ratones">Ratones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-section="teclados">Teclados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-section="mandos">Mandos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-section="monitores">Monitores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-section="cascos">Cascos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal donde se mostrarán los productos -->
+    <div class="container mt-5">
+        <!-- Sección de Ratones -->
+        <div id="ratones" class="section-container active">
+            <h2 class="mb-4">Ratones</h2>
+            <div class="row">
+                {% for producto in ratones %}
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ producto.nombre }}</h5>
+                            <p class="card-text">{{ producto.descripcion }}</p>
+                            <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <p>No hay productos de este tipo.</p>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Sección de Teclados -->
+        <div id="teclados" class="section-container">
+            <h2 class="mb-4">Teclados</h2>
+            <div class="row">
+                {% for producto in teclados %}
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ producto.nombre }}</h5>
+                            <p class="card-text">{{ producto.descripcion }}</p>
+                            <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <p>No hay productos de este tipo.</p>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Sección de Mandos -->
+        <div id="mandos" class="section-container">
+            <h2 class="mb-4">Mandos</h2>
+            <div class="row">
+                {% for producto in mandos %}
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ producto.nombre }}</h5>
+                            <p class="card-text">{{ producto.descripcion }}</p>
+                            <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <p>No hay productos de este tipo.</p>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Sección de Monitores -->
+        <div id="monitores" class="section-container">
+            <h2 class="mb-4">Monitores</h2>
+            <div class="row">
+                {% for producto in monitores %}
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ producto.nombre }}</h5>
+                            <p class="card-text">{{ producto.descripcion }}</p>
+                            <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <p>No hay productos de este tipo.</p>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Sección de Cascos -->
+        <div id="cascos" class="section-container">
+            <h2 class="mb-4">Cascos</h2>
+            <div class="row">
+                {% for producto in cascos %}
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ producto.nombre }}</h5>
+                            <p class="card-text">{{ producto.descripcion }}</p>
+                            <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <p>No hay productos de este tipo.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS y JavaScript personalizado -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    navLinks.forEach(l => l.parentElement.classList.remove('active'));
+                    this.parentElement.classList.add('active');
+                    const sectionId = this.getAttribute('data-section');
+                    document.querySelectorAll('.section-container').forEach(section => section.classList.remove('active'));
+                    document.getElementById(sectionId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
