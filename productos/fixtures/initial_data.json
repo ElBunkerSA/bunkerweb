@@ -3,275 +3,325 @@
     "model": "productos.Producto",
     "pk": 1,
     "fields": {
-      "nombre": "Ratón Gaming RGB",
-      "tipo": "raton",
+      "nombre": "Ajedrez Clásico",
+      "tipo": "juegos",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/raton-gaming-rgb",
-      "descripcion": "Ratón con alta precisión y diseño ergonómico, ideal para gamers."
+      "afiliado_url": "https://afiliados.com/ajedrez-clasico",
+      "descripcion": "Juego de mesa de estrategia clásico.",
+      "destacado": true,
+      "subcategoria": "fisico"
     }
   },
   {
     "model": "productos.Producto",
     "pk": 2,
     "fields": {
-      "nombre": "Ratón Inalámbrico",
-      "tipo": "raton",
+      "nombre": "Monopoly",
+      "tipo": "juegos",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/raton-inalambrico",
-      "descripcion": "Ratón sin cables con conexión estable y respuesta rápida."
+      "afiliado_url": "https://afiliados.com/monopoly",
+      "descripcion": "Juego de mesa de bienes raíces.",
+      "destacado": false,
+      "subcategoria": "fisico"
     }
   },
   {
     "model": "productos.Producto",
     "pk": 3,
     "fields": {
-      "nombre": "Ratón Ultraligero",
-      "tipo": "raton",
+      "nombre": "Fortnite",
+      "tipo": "juegos",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/raton-ultraligero",
-      "descripcion": "Diseñado para largas jornadas de uso, con un peso mínimo y gran precisión."
+      "afiliado_url": "https://afiliados.com/fortnite",
+      "descripcion": "Juego de batalla real multijugador en línea.",
+      "destacado": true,
+      "subcategoria": "digital"
     }
   },
   {
     "model": "productos.Producto",
     "pk": 4,
     "fields": {
-      "nombre": "Ratón Precisión",
-      "tipo": "raton",
+      "nombre": "Minecraft",
+      "tipo": "juegos",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/raton-precision",
-      "descripcion": "Ofrece un seguimiento preciso en cualquier superficie, ideal para profesionales."
+      "afiliado_url": "https://afiliados.com/minecraft",
+      "descripcion": "Juego de construcción y supervivencia.",
+      "destacado": false,
+      "subcategoria": "digital"
     }
   },
   {
     "model": "productos.Producto",
     "pk": 5,
     "fields": {
-      "nombre": "Ratón Ergonómico",
-      "tipo": "raton",
+      "nombre": "Among Us",
+      "tipo": "juegos",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/raton-ergonomico",
-      "descripcion": "Diseñado para adaptarse a la forma de la mano, reduciendo la fatiga durante el uso prolongado."
+      "afiliado_url": "https://afiliados.com/among-us",
+      "descripcion": "Juego multijugador de deducción social.",
+      "destacado": false,
+      "subcategoria": "digital"
     }
   },
   {
     "model": "productos.Producto",
     "pk": 6,
     "fields": {
-      "nombre": "Teclado Mecánico RGB",
-      "tipo": "teclado",
+      "nombre": "Ratón Gaming RGB",
+      "tipo": "ratones",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/teclado-mecanico-rgb",
-      "descripcion": "Teclado mecánico con retroiluminación RGB y switches de alta durabilidad."
+      "afiliado_url": "https://afiliados.com/raton-gaming-rgb",
+      "descripcion": "Alta precisión y ergonomía, ideal para gaming.",
+      "destacado": true,
+      "subcategoria": null
     }
   },
   {
     "model": "productos.Producto",
     "pk": 7,
     "fields": {
-      "nombre": "Teclado Compacto 60%",
-      "tipo": "teclado",
+      "nombre": "Ratón Inalámbrico",
+      "tipo": "ratones",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/teclado-compacto",
-      "descripcion": "Diseño compacto sin sacrificar funcionalidad, perfecto para espacios reducidos."
+      "afiliado_url": "https://afiliados.com/raton-inalambrico",
+      "descripcion": "Diseño sin cables y conectividad estable.",
+      "destacado": false,
+      "subcategoria": null
     }
   },
   {
     "model": "productos.Producto",
     "pk": 8,
     "fields": {
-      "nombre": "Teclado Ergonómico",
-      "tipo": "teclado",
+      "nombre": "Ratón Ergonómico",
+      "tipo": "ratones",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/teclado-ergonomico",
-      "descripcion": "Teclado dividido para mejorar la postura y reducir la fatiga de las muñecas."
+      "afiliado_url": "https://afiliados.com/raton-ergonomico",
+      "descripcion": "Diseñado para comodidad en largas sesiones.",
+      "destacado": false,
+      "subcategoria": null
     }
   },
   {
     "model": "productos.Producto",
     "pk": 9,
     "fields": {
-      "nombre": "Teclado Retroiluminado",
-      "tipo": "teclado",
+      "nombre": "Ratón UltraLigero",
+      "tipo": "ratones",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/teclado-retroiluminado",
-      "descripcion": "Iluminación LED personalizable que mejora la visibilidad en ambientes oscuros."
+      "afiliado_url": "https://afiliados.com/raton-ultraligero",
+      "descripcion": "Peso reducido y gran velocidad.",
+      "destacado": false,
+      "subcategoria": null
     }
   },
   {
     "model": "productos.Producto",
     "pk": 10,
     "fields": {
-      "nombre": "Teclado Multimedias",
-      "tipo": "teclado",
+      "nombre": "Ratón Vertical",
+      "tipo": "ratones",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/teclado-multimedias",
-      "descripcion": "Incluye teclas especiales para controlar multimedia y otras funciones del sistema."
+      "afiliado_url": "https://afiliados.com/raton-vertical",
+      "descripcion": "Ideal para reducir la tensión en la muñeca.",
+      "destacado": false,
+      "subcategoria": null
     }
   },
   {
     "model": "productos.Producto",
     "pk": 11,
     "fields": {
-      "nombre": "Mando Xbox Series X/S",
-      "tipo": "mando",
+      "nombre": "Teclado Mecánico RGB",
+      "tipo": "teclados",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/mando-xbox-series",
-      "descripcion": "Mando con ergonomía mejorada y compatibilidad con múltiples dispositivos."
+      "afiliado_url": "https://afiliados.com/teclado-mecanico-rgb",
+      "descripcion": "Switches de alta durabilidad y retroiluminación personalizable.",
+      "destacado": true,
+      "subcategoria": null
     }
   },
   {
     "model": "productos.Producto",
     "pk": 12,
     "fields": {
-      "nombre": "Mando DualSense PS5",
-      "tipo": "mando",
+      "nombre": "Teclado Compacto 60%",
+      "tipo": "teclados",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/mando-dualsense-ps5",
-      "descripcion": "Innovador mando con respuesta háptica y gatillos adaptativos para una experiencia inmersiva."
+      "afiliado_url": "https://afiliados.com/teclado-compacto-60",
+      "descripcion": "Diseño minimalista y portátil.",
+      "destacado": false,
+      "subcategoria": null
     }
   },
   {
     "model": "productos.Producto",
     "pk": 13,
     "fields": {
-      "nombre": "Mando Pro Switch",
-      "tipo": "mando",
+      "nombre": "Teclado Ergonómico",
+      "tipo": "teclados",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/mando-pro-switch",
-      "descripcion": "Mando diseñado para una experiencia de juego profesional, con alta precisión y respuesta rápida."
+      "afiliado_url": "https://afiliados.com/teclado-ergonomico",
+      "descripcion": "Diseñado para mejorar la postura y reducir fatiga.",
+      "destacado": false,
+      "subcategoria": null
     }
   },
   {
     "model": "productos.Producto",
     "pk": 14,
     "fields": {
-      "nombre": "Mando para PC",
-      "tipo": "mando",
+      "nombre": "Teclado Inalámbrico",
+      "tipo": "teclados",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/mando-para-pc",
-      "descripcion": "Compatibilidad total con juegos de PC, ofreciendo comodidad y funcionalidad."
+      "afiliado_url": "https://afiliados.com/teclado-inalambrico",
+      "descripcion": "Conectividad inalámbrica y batería de larga duración.",
+      "destacado": false,
+      "subcategoria": null
     }
   },
   {
     "model": "productos.Producto",
     "pk": 15,
     "fields": {
-      "nombre": "Mando Genérico",
-      "tipo": "mando",
+      "nombre": "Mando Xbox Series X/S",
+      "tipo": "mandos",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/mando-generico",
-      "descripcion": "Opción asequible y funcional para quienes buscan un mando básico y eficiente."
+      "afiliado_url": "https://afiliados.com/mando-xbox-series",
+      "descripcion": "Compatibilidad total y diseño ergonómico.",
+      "destacado": true,
+      "subcategoria": null
     }
   },
   {
     "model": "productos.Producto",
     "pk": 16,
     "fields": {
-      "nombre": "Monitor Gaming 27\"",
-      "tipo": "monitor",
+      "nombre": "Mando DualSense PS5",
+      "tipo": "mandos",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/monitor-gaming-27",
-      "descripcion": "Monitor de alta frecuencia de actualización y resolución para juegos competitivos."
+      "afiliado_url": "https://afiliados.com/mando-dualsense-ps5",
+      "descripcion": "Innovador mando con respuesta háptica.",
+      "destacado": false,
+      "subcategoria": null
     }
   },
   {
     "model": "productos.Producto",
     "pk": 17,
     "fields": {
-      "nombre": "Monitor Ultrawide 34\"",
-      "tipo": "monitor",
+      "nombre": "Mando Genérico",
+      "tipo": "mandos",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/monitor-ultrawide-34",
-      "descripcion": "Amplio espacio de pantalla para una experiencia visual inmersiva en juegos y multimedia."
+      "afiliado_url": "https://afiliados.com/mando-generico",
+      "descripcion": "Opción económica para juegos casuales.",
+      "destacado": false,
+      "subcategoria": null
     }
   },
   {
     "model": "productos.Producto",
     "pk": 18,
     "fields": {
-      "nombre": "Monitor 4K 32\"",
-      "tipo": "monitor",
+      "nombre": "Casco Gamer RGB",
+      "tipo": "cascos",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/monitor-4k-32",
-      "descripcion": "Alta resolución y detalles impresionantes, ideal para profesionales y gamers."
+      "afiliado_url": "https://afiliados.com/casco-gamer-rgb",
+      "descripcion": "Sonido envolvente y diseño moderno.",
+      "destacado": true,
+      "subcategoria": null
     }
   },
   {
     "model": "productos.Producto",
     "pk": 19,
     "fields": {
-      "nombre": "Monitor Curvo 24\"",
-      "tipo": "monitor",
+      "nombre": "Casco Inalámbrico",
+      "tipo": "cascos",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/monitor-curvo-24",
-      "descripcion": "Monitor con curva sutil para una experiencia de visualización más inmersiva."
+      "afiliado_url": "https://afiliados.com/casco-inalambrico",
+      "descripcion": "Libertad de movimiento y calidad de sonido.",
+      "destacado": false,
+      "subcategoria": null
     }
   },
   {
     "model": "productos.Producto",
     "pk": 20,
     "fields": {
-      "nombre": "Monitor IPS 22\"",
-      "tipo": "monitor",
+      "nombre": "Casco Profesional",
+      "tipo": "cascos",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/monitor-ips-22",
-      "descripcion": "Tecnología IPS para colores precisos y amplios ángulos de visión."
+      "afiliado_url": "https://afiliados.com/casco-profesional",
+      "descripcion": "Calidad superior y comodidad para largas sesiones.",
+      "destacado": false,
+      "subcategoria": null
     }
   },
   {
     "model": "productos.Producto",
     "pk": 21,
     "fields": {
-      "nombre": "Casco Gamer RGB",
-      "tipo": "casco",
+      "nombre": "Casco Bluetooth",
+      "tipo": "cascos",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/casco-gamer-rgb",
-      "descripcion": "Casco con iluminación RGB y sonido envolvente para una experiencia de juego inmersiva."
+      "afiliado_url": "https://afiliados.com/casco-bluetooth",
+      "descripcion": "Integración con dispositivos móviles.",
+      "destacado": false,
+      "subcategoria": null
     }
   },
   {
     "model": "productos.Producto",
     "pk": 22,
     "fields": {
-      "nombre": "Casco Inalámbrico",
-      "tipo": "casco",
+      "nombre": "Soporte para Monitor",
+      "tipo": "otros",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/casco-inalambrico",
-      "descripcion": "Sin cables para mayor comodidad y libertad de movimiento."
+      "afiliado_url": "https://afiliados.com/soporte-monitor",
+      "descripcion": "Aumenta la ergonomía en tu espacio de trabajo.",
+      "destacado": false,
+      "subcategoria": null
     }
   },
   {
     "model": "productos.Producto",
     "pk": 23,
     "fields": {
-      "nombre": "Casco Profesional",
-      "tipo": "casco",
+      "nombre": "Base para Teclado",
+      "tipo": "otros",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/casco-profesional",
-      "descripcion": "Calidad superior y materiales premium para usuarios exigentes."
+      "afiliado_url": "https://afiliados.com/base-teclado",
+      "descripcion": "Mejora la comodidad al escribir.",
+      "destacado": false,
+      "subcategoria": null
     }
   },
   {
     "model": "productos.Producto",
     "pk": 24,
     "fields": {
-      "nombre": "Casco Bluetooth",
-      "tipo": "casco",
+      "nombre": "Cargador USB MultiPuerto",
+      "tipo": "otros",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/casco-bluetooth",
-      "descripcion": "Integración de tecnología Bluetooth para una conexión inalámbrica sencilla."
+      "afiliado_url": "https://afiliados.com/cargador-usb-multipuerto",
+      "descripcion": "Carga rápida y eficiente para todos tus dispositivos.",
+      "destacado": true,
+      "subcategoria": null
     }
   },
   {
     "model": "productos.Producto",
     "pk": 25,
     "fields": {
-      "nombre": "Casco Deportivo",
-      "tipo": "casco",
+      "nombre": "Hub USB-C",
+      "tipo": "otros",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/casco-deportivo",
-      "descripcion": "Diseñado para ofrecer gran comodidad y protección durante el ejercicio."
+      "afiliado_url": "https://afiliados.com/hub-usb-c",
+      "descripcion": "Expande las conexiones de tu laptop.",
+      "destacado": false,
+      "subcategoria": null
     }
   }
 ]
