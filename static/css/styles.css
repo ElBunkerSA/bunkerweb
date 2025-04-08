@@ -1,0 +1,166 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px 0;
+    background-color: #ffffff;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: #5580b7;
+    position: relative;
+}
+
+.navbar-brand span {
+    color: #010101;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    align-items: center;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 14px;
+    color: #212529;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 15px !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #5580b7;
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.dropdown-item {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px 25px;
+    color: #212529;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #f8f9fa;
+    color: #5580b7;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-left: 8px;
+    color: white;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.twitch {
+    background-color: #6441a5;
+}
+
+.whatsapp {
+    background-color: #25d366;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.social-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0;
+    font-size: 1.5rem;
+    color: #212529;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: white;
+        padding: 20px;
+        margin-top: 15px;
+    }
+
+    .social-icons {
+        margin-top: 15px;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .navbar-nav .nav-item {
+        text-align: center;
+    }
+}
+
+/* Estilos para las tarjetas de productos y secciones */
+.product-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section-container {
+    display: none;
+}
+
+.section-container.active {
+    display: block;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.sub-section-title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
