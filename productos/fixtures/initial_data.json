@@ -3,299 +3,299 @@
     "model": "productos.Producto",
     "pk": 1,
     "fields": {
-      "nombre": "Ajedrez Clásico",
-      "tipo": "juegos",
+      "nombre": "Ratón Óptico Pro",
+      "categoria": "perifericos",
+      "subcategoria": "ratones",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/ajedrez-clasico",
-      "descripcion": "Juego de mesa de estrategia clásico.",
-      "destacado": true,
-      "subcategoria": "fisico"
+      "afiliado_url": "https://afiliados.example.com/raton-optico-pro",
+      "descripcion": "Ratón óptico de alta precisión para gaming.",
+      "destacado": true
     }
   },
   {
     "model": "productos.Producto",
     "pk": 2,
     "fields": {
-      "nombre": "Monopoly",
-      "tipo": "juegos",
+      "nombre": "Ratón Inalámbrico Ergonómico",
+      "categoria": "perifericos",
+      "subcategoria": "ratones",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/monopoly",
-      "descripcion": "Juego de mesa de bienes raíces.",
-      "destacado": false,
-      "subcategoria": "fisico"
+      "afiliado_url": "https://afiliados.example.com/raton-inalambrico-ergonomico",
+      "descripcion": "Ratón sin cables con diseño ergonómico y respuesta rápida.",
+      "destacado": false
     }
   },
   {
     "model": "productos.Producto",
     "pk": 3,
     "fields": {
-      "nombre": "Fortnite",
-      "tipo": "juegos",
+      "nombre": "Mando Xbox Elite",
+      "categoria": "perifericos",
+      "subcategoria": "mandos",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/fortnite",
-      "descripcion": "Juego de batalla real multijugador en línea.",
-      "destacado": true,
-      "subcategoria": "digital"
+      "afiliado_url": "https://afiliados.example.com/mando-xbox-elite",
+      "descripcion": "Mando premium con retroalimentación háptica para Xbox.",
+      "destacado": true
     }
   },
   {
     "model": "productos.Producto",
     "pk": 4,
     "fields": {
-      "nombre": "Minecraft",
-      "tipo": "juegos",
+      "nombre": "Mando DualSense Premium",
+      "categoria": "perifericos",
+      "subcategoria": "mandos",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/minecraft",
-      "descripcion": "Juego de construcción y supervivencia.",
-      "destacado": false,
-      "subcategoria": "digital"
+      "afiliado_url": "https://afiliados.example.com/mando-dualsense-premium",
+      "descripcion": "Mando avanzado para PS5 con sensores mejorados.",
+      "destacado": false
     }
   },
   {
     "model": "productos.Producto",
     "pk": 5,
     "fields": {
-      "nombre": "Among Us",
-      "tipo": "juegos",
+      "nombre": "Teclado Mecánico RGB",
+      "categoria": "perifericos",
+      "subcategoria": "teclados",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/among-us",
-      "descripcion": "Juego multijugador de deducción social.",
-      "destacado": false,
-      "subcategoria": "digital"
+      "afiliado_url": "https://afiliados.example.com/teclado-mecanico-rgb",
+      "descripcion": "Teclado mecánico con retroiluminación personalizable para gamers.",
+      "destacado": true
     }
   },
   {
     "model": "productos.Producto",
     "pk": 6,
     "fields": {
-      "nombre": "Ratón Gaming RGB",
-      "tipo": "ratones",
+      "nombre": "Teclado Compacto Silencioso",
+      "categoria": "perifericos",
+      "subcategoria": "teclados",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/raton-gaming-rgb",
-      "descripcion": "Alta precisión y ergonomía, ideal para gaming.",
-      "destacado": true,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/teclado-compacto-silencioso",
+      "descripcion": "Teclado compacto con teclas silenciosas para trabajo y juego.",
+      "destacado": false
     }
   },
   {
     "model": "productos.Producto",
     "pk": 7,
     "fields": {
-      "nombre": "Ratón Inalámbrico",
-      "tipo": "ratones",
+      "nombre": "Casco Gaming Surround",
+      "categoria": "perifericos",
+      "subcategoria": "cascos",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/raton-inalambrico",
-      "descripcion": "Diseño sin cables y conectividad estable.",
-      "destacado": false,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/casco-gaming-surround",
+      "descripcion": "Casco con sonido envolvente ideal para partidas competitivas.",
+      "destacado": true
     }
   },
   {
     "model": "productos.Producto",
     "pk": 8,
     "fields": {
-      "nombre": "Ratón Ergonómico",
-      "tipo": "ratones",
+      "nombre": "Casco Inalámbrico Pro",
+      "categoria": "perifericos",
+      "subcategoria": "cascos",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/raton-ergonomico",
-      "descripcion": "Diseñado para comodidad en largas sesiones.",
-      "destacado": false,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/casco-inalambrico-pro",
+      "descripcion": "Casco inalámbrico con micrófono de alta calidad.",
+      "destacado": false
     }
   },
   {
     "model": "productos.Producto",
     "pk": 9,
     "fields": {
-      "nombre": "Ratón UltraLigero",
-      "tipo": "ratones",
+      "nombre": "Juego de Mesa Estrategia",
+      "categoria": "videojuegos",
+      "subcategoria": "fisico",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/raton-ultraligero",
-      "descripcion": "Peso reducido y gran velocidad.",
-      "destacado": false,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/juego-mesa-estrategia",
+      "descripcion": "Juego de mesa físico perfecto para amantes de la estrategia.",
+      "destacado": false
     }
   },
   {
     "model": "productos.Producto",
     "pk": 10,
     "fields": {
-      "nombre": "Ratón Vertical",
-      "tipo": "ratones",
+      "nombre": "Ajedrez Clásico",
+      "categoria": "videojuegos",
+      "subcategoria": "fisico",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/raton-vertical",
-      "descripcion": "Ideal para reducir la tensión en la muñeca.",
-      "destacado": false,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/ajedrez-clasico",
+      "descripcion": "Juego clásico de ajedrez en formato físico.",
+      "destacado": true
     }
   },
   {
     "model": "productos.Producto",
     "pk": 11,
     "fields": {
-      "nombre": "Teclado Mecánico RGB",
-      "tipo": "teclados",
+      "nombre": "Dominó Moderno",
+      "categoria": "videojuegos",
+      "subcategoria": "fisico",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/teclado-mecanico-rgb",
-      "descripcion": "Switches de alta durabilidad y retroiluminación personalizable.",
-      "destacado": true,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/domino-moderno",
+      "descripcion": "Versión moderna del dominó para reuniones familiares.",
+      "destacado": false
     }
   },
   {
     "model": "productos.Producto",
     "pk": 12,
     "fields": {
-      "nombre": "Teclado Compacto 60%",
-      "tipo": "teclados",
+      "nombre": "Fortnite Battle Royale",
+      "categoria": "videojuegos",
+      "subcategoria": "digital",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/teclado-compacto-60",
-      "descripcion": "Diseño minimalista y portátil.",
-      "destacado": false,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/fortnite-battle-royale",
+      "descripcion": "El popular juego multijugador de batalla real.",
+      "destacado": true
     }
   },
   {
     "model": "productos.Producto",
     "pk": 13,
     "fields": {
-      "nombre": "Teclado Ergonómico",
-      "tipo": "teclados",
+      "nombre": "Minecraft",
+      "categoria": "videojuegos",
+      "subcategoria": "digital",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/teclado-ergonomico",
-      "descripcion": "Diseñado para mejorar la postura y reducir fatiga.",
-      "destacado": false,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/minecraft",
+      "descripcion": "Juego digital de construcción y aventuras.",
+      "destacado": false
     }
   },
   {
     "model": "productos.Producto",
     "pk": 14,
     "fields": {
-      "nombre": "Teclado Inalámbrico",
-      "tipo": "teclados",
+      "nombre": "Among Us",
+      "categoria": "videojuegos",
+      "subcategoria": "digital",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/teclado-inalambrico",
-      "descripcion": "Conectividad inalámbrica y batería de larga duración.",
-      "destacado": false,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/among-us",
+      "descripcion": "Juego digital de deducción social.",
+      "destacado": false
     }
   },
   {
     "model": "productos.Producto",
     "pk": 15,
     "fields": {
-      "nombre": "Mando Xbox Series X/S",
-      "tipo": "mandos",
+      "nombre": "Consola NextGen X",
+      "categoria": "hardware",
+      "subcategoria": "consolas",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/mando-xbox-series",
-      "descripcion": "Compatibilidad total y diseño ergonómico.",
-      "destacado": true,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/consola-nextgen-x",
+      "descripcion": "Consola de última generación con soporte 4K.",
+      "destacado": true
     }
   },
   {
     "model": "productos.Producto",
     "pk": 16,
     "fields": {
-      "nombre": "Mando DualSense PS5",
-      "tipo": "mandos",
+      "nombre": "Consola Retro 90s",
+      "categoria": "hardware",
+      "subcategoria": "consolas",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/mando-dualsense-ps5",
-      "descripcion": "Innovador mando con respuesta háptica.",
-      "destacado": false,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/consola-retro-90s",
+      "descripcion": "Consola clásica de los años 90 con juegos nostálgicos.",
+      "destacado": false
     }
   },
   {
     "model": "productos.Producto",
     "pk": 17,
     "fields": {
-      "nombre": "Mando Genérico",
-      "tipo": "mandos",
+      "nombre": "Consola Compacta Z",
+      "categoria": "hardware",
+      "subcategoria": "consolas",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/mando-generico",
-      "descripcion": "Opción económica para juegos casuales.",
-      "destacado": false,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/consola-compacta-z",
+      "descripcion": "Consola compacta y fácil de transportar.",
+      "destacado": false
     }
   },
   {
     "model": "productos.Producto",
     "pk": 18,
     "fields": {
-      "nombre": "Casco Gamer RGB",
-      "tipo": "cascos",
+      "nombre": "PC Gamer Ultra",
+      "categoria": "hardware",
+      "subcategoria": "pc",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/casco-gamer-rgb",
-      "descripcion": "Sonido envolvente y diseño moderno.",
-      "destacado": true,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/pc-gamer-ultra",
+      "descripcion": "PC de alto rendimiento para juegos exigentes.",
+      "destacado": true
     }
   },
   {
     "model": "productos.Producto",
     "pk": 19,
     "fields": {
-      "nombre": "Casco Inalámbrico",
-      "tipo": "cascos",
+      "nombre": "PC Office Pro",
+      "categoria": "hardware",
+      "subcategoria": "pc",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/casco-inalambrico",
-      "descripcion": "Libertad de movimiento y calidad de sonido.",
-      "destacado": false,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/pc-office-pro",
+      "descripcion": "PC optimizada para tareas de oficina y multitarea.",
+      "destacado": false
     }
   },
   {
     "model": "productos.Producto",
     "pk": 20,
     "fields": {
-      "nombre": "Casco Profesional",
-      "tipo": "cascos",
+      "nombre": "Mini PC Desktop",
+      "categoria": "hardware",
+      "subcategoria": "pc",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/casco-profesional",
-      "descripcion": "Calidad superior y comodidad para largas sesiones.",
-      "destacado": false,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/mini-pc-desktop",
+      "descripcion": "Mini PC potente y compacto para uso doméstico.",
+      "destacado": false
     }
   },
   {
     "model": "productos.Producto",
     "pk": 21,
     "fields": {
-      "nombre": "Casco Bluetooth",
-      "tipo": "cascos",
+      "nombre": "Tarjeta Gráfica RTX 4090",
+      "categoria": "hardware",
+      "subcategoria": "componentes",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/casco-bluetooth",
-      "descripcion": "Integración con dispositivos móviles.",
-      "destacado": false,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/rtx-4090",
+      "descripcion": "Tarjeta gráfica de última generación para gaming extremo.",
+      "destacado": true
     }
   },
   {
     "model": "productos.Producto",
     "pk": 22,
     "fields": {
-      "nombre": "Soporte para Monitor",
-      "tipo": "otros",
+      "nombre": "Procesador AMD Ryzen 9",
+      "categoria": "hardware",
+      "subcategoria": "componentes",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/soporte-monitor",
-      "descripcion": "Aumenta la ergonomía en tu espacio de trabajo.",
-      "destacado": false,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/ryzen-9",
+      "descripcion": "Procesador de alto rendimiento para tareas intensivas.",
+      "destacado": false
     }
   },
   {
     "model": "productos.Producto",
     "pk": 23,
     "fields": {
-      "nombre": "Base para Teclado",
-      "tipo": "otros",
+      "nombre": "Memoria RAM 32GB",
+      "categoria": "hardware",
+      "subcategoria": "componentes",
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/base-teclado",
-      "descripcion": "Mejora la comodidad al escribir.",
-      "destacado": false,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/ram-32gb",
+      "descripcion": "Memoria de alta velocidad para sistemas exigentes.",
+      "destacado": false
     }
   },
   {
@@ -303,25 +303,90 @@
     "pk": 24,
     "fields": {
       "nombre": "Cargador USB MultiPuerto",
-      "tipo": "otros",
+      "categoria": "otros",
+      "subcategoria": null,
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/cargador-usb-multipuerto",
-      "descripcion": "Carga rápida y eficiente para todos tus dispositivos.",
-      "destacado": true,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/cargador-usb-multipuerto",
+      "descripcion": "Cargador con múltiples puertos para dispositivos móviles.",
+      "destacado": false
     }
   },
   {
     "model": "productos.Producto",
     "pk": 25,
     "fields": {
-      "nombre": "Hub USB-C",
-      "tipo": "otros",
+      "nombre": "Soporte para Monitor Ajustable",
+      "categoria": "otros",
+      "subcategoria": null,
       "imagen_url": "https://via.placeholder.com/400x300",
-      "afiliado_url": "https://afiliados.com/hub-usb-c",
-      "descripcion": "Expande las conexiones de tu laptop.",
-      "destacado": false,
-      "subcategoria": null
+      "afiliado_url": "https://afiliados.example.com/soporte-monitor-ajustable",
+      "descripcion": "Soporte ajustable que mejora la ergonomía en el escritorio.",
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.Producto",
+    "pk": 26,
+    "fields": {
+      "nombre": "Hub USB-C",
+      "categoria": "otros",
+      "subcategoria": null,
+      "imagen_url": "https://via.placeholder.com/400x300",
+      "afiliado_url": "https://afiliados.example.com/hub-usb-c",
+      "descripcion": "Hub multi puerto para expandir la conectividad de tu laptop.",
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.Producto",
+    "pk": 27,
+    "fields": {
+      "nombre": "Base para Teclado Ergonómica",
+      "categoria": "otros",
+      "subcategoria": null,
+      "imagen_url": "https://via.placeholder.com/400x300",
+      "afiliado_url": "https://afiliados.example.com/base-teclado-ergonomica",
+      "descripcion": "Base diseñada para mejorar la postura y comodidad al teclear.",
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.Producto",
+    "pk": 28,
+    "fields": {
+      "nombre": "Mouse Pad XL",
+      "categoria": "otros",
+      "subcategoria": null,
+      "imagen_url": "https://via.placeholder.com/400x300",
+      "afiliado_url": "https://afiliados.example.com/mouse-pad-xl",
+      "descripcion": "Alfombrilla para ratón de gran tamaño para juegos y trabajo.",
+      "destacado": false
+    }
+  },
+  {
+    "model": "productos.Producto",
+    "pk": 29,
+    "fields": {
+      "nombre": "Cinta de Embalaje Premium",
+      "categoria": "otros",
+      "subcategoria": null,
+      "imagen_url": "https://via.placeholder.com/400x300",
+      "afiliado_url": "https://afiliados.example.com/cinta-embalaje-premium",
+      "descripcion": "Cinta resistente para embalaje de alta calidad.",
+      "destacado": true
+    }
+  },
+  {
+    "model": "productos.Producto",
+    "pk": 30,
+    "fields": {
+      "nombre": "Estantería para Juegos",
+      "categoria": "otros",
+      "subcategoria": null,
+      "imagen_url": "https://via.placeholder.com/400x300",
+      "afiliado_url": "https://afiliados.example.com/estanteria-para-juegos",
+      "descripcion": "Estantería diseñada para organizar y exhibir tus juegos.",
+      "destacado": false
     }
   }
 ]

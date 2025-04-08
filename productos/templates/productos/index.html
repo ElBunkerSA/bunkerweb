@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -23,7 +22,7 @@
           position: relative;
       }
       .nav-link {
-          color: #000000 !important;
+          color: #000 !important;
           font-weight: 500;
           text-transform: uppercase;
           letter-spacing: 0.5px;
@@ -31,7 +30,7 @@
           transition: color 0.3s;
       }
       .nav-link:hover {
-          color: #555555 !important;
+          color: #555;
       }
       .nav-link::after {
           content: '';
@@ -40,7 +39,7 @@
           left: 0;
           width: 0;
           height: 2px;
-          background-color: #888888;
+          background-color: #888;
           transition: width 0.3s;
       }
       .nav-link:hover::after {
@@ -49,11 +48,8 @@
       .navbar-nav {
           margin: 0 auto;
       }
-      .active .nav-link {
-          color: #555555 !important;
-      }
-      .active .nav-link::after {
-          width: 100%;
+      .active > .nav-link {
+          color: #555 !important;
       }
       .product-card {
           transition: transform 0.3s, box-shadow 0.3s;
@@ -71,21 +67,28 @@
       }
       .card-img-top {
           width: 100%;
-          height: 200px; /* Ajusta la altura según necesites */
+          height: 200px; /* Ajusta según prefieras */
           object-fit: contain;
       }
-
+      .sub-section-title {
+          margin-top: 30px;
+          margin-bottom: 15px;
+          border-bottom: 2px solid #ccc;
+          padding-bottom: 5px;
+          font-size: 1.25rem;
+          text-transform: uppercase;
+      }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
+  <!-- Navbar sin dropdown (5 items principales) -->
   <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
       <div class="container">
-           <a class="navbar-brand" href="#">
-            <img src="{% static 'images/logo.jpg' %}" alt="El Búnker S.A." style="height: 70px;">
-        </a>
+          <a class="navbar-brand" href="#">
+              <img src="{% static 'images/logo.jpg' %}" alt="Bunker Top" style="height:70px;">
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -94,19 +97,13 @@
                       <a class="nav-link" href="#" data-section="destacados">Destacados</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#" data-section="juegos">Juegos</a>
+                      <a class="nav-link" href="#" data-section="perifericos">Periféricos</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#" data-section="ratones">Ratones</a>
+                      <a class="nav-link" href="#" data-section="videojuegos">Videojuegos</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#" data-section="teclados">Teclados</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#" data-section="mandos">Mandos</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#" data-section="cascos">Cascos</a>
+                      <a class="nav-link" href="#" data-section="hardware">Hardware y Consolas</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="#" data-section="otros">Otros</a>
@@ -116,9 +113,9 @@
       </div>
   </nav>
 
-  <!-- Contenedor principal donde se mostrarán los productos -->
+  <!-- Contenedor principal -->
   <div class="container mt-5">
-      <!-- Sección de Destacados -->
+      <!-- Destacados -->
       <div id="destacados" class="section-container active">
           <h2 class="mb-4">Destacados</h2>
           <div class="row">
@@ -139,130 +136,202 @@
           </div>
       </div>
 
-      <!-- Sección de Juegos -->
-      <div id="juegos" class="section-container">
-          <h2 class="mb-4">Juegos</h2>
-          <h3>Juegos Físicos</h3>
-          <div class="row">
-              {% for producto in juegos_fisicos %}
-              <div class="col-md-4">
-                  <div class="card product-card">
-                      <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
-                      <div class="card-body">
-                          <h5 class="card-title">{{ producto.nombre }}</h5>
-                          <p class="card-text">{{ producto.descripcion }}</p>
-                          <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+      <!-- Periféricos: se muestran sus 4 subcategorías -->
+      <div id="perifericos" class="section-container">
+          <h2 class="mb-4">Periféricos</h2>
+          <!-- Ratones -->
+          <div class="sub-section">
+              <h3 class="sub-section-title">Ratones</h3>
+              <div class="row">
+                  {% for producto in ratones %}
+                  <div class="col-md-4">
+                      <div class="card product-card">
+                          <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+                          <div class="card-body">
+                              <h5 class="card-title">{{ producto.nombre }}</h5>
+                              <p class="card-text">{{ producto.descripcion }}</p>
+                              <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+                          </div>
                       </div>
                   </div>
+                  {% empty %}
+                  <p>No hay ratones.</p>
+                  {% endfor %}
               </div>
-              {% empty %}
-              <p>No hay juegos físicos.</p>
-              {% endfor %}
           </div>
-          <h3 class="mt-5">Juegos Digitales</h3>
-          <div class="row">
-              {% for producto in juegos_digitales %}
-              <div class="col-md-4">
-                  <div class="card product-card">
-                      <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
-                      <div class="card-body">
-                          <h5 class="card-title">{{ producto.nombre }}</h5>
-                          <p class="card-text">{{ producto.descripcion }}</p>
-                          <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+          <!-- Mandos -->
+          <div class="sub-section">
+              <h3 class="sub-section-title">Mandos</h3>
+              <div class="row">
+                  {% for producto in mandos %}
+                  <div class="col-md-4">
+                      <div class="card product-card">
+                          <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+                          <div class="card-body">
+                              <h5 class="card-title">{{ producto.nombre }}</h5>
+                              <p class="card-text">{{ producto.descripcion }}</p>
+                              <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+                          </div>
                       </div>
                   </div>
+                  {% empty %}
+                  <p>No hay mandos.</p>
+                  {% endfor %}
               </div>
-              {% empty %}
-              <p>No hay juegos digitales.</p>
-              {% endfor %}
           </div>
-      </div>
-
-      <!-- Sección de Ratones -->
-      <div id="ratones" class="section-container">
-          <h2 class="mb-4">Ratones</h2>
-          <div class="row">
-              {% for producto in ratones %}
-              <div class="col-md-4">
-                  <div class="card product-card">
-                      <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
-                      <div class="card-body">
-                          <h5 class="card-title">{{ producto.nombre }}</h5>
-                          <p class="card-text">{{ producto.descripcion }}</p>
-                          <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+          <!-- Teclados -->
+          <div class="sub-section">
+              <h3 class="sub-section-title">Teclados</h3>
+              <div class="row">
+                  {% for producto in teclados %}
+                  <div class="col-md-4">
+                      <div class="card product-card">
+                          <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+                          <div class="card-body">
+                              <h5 class="card-title">{{ producto.nombre }}</h5>
+                              <p class="card-text">{{ producto.descripcion }}</p>
+                              <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+                          </div>
                       </div>
                   </div>
+                  {% empty %}
+                  <p>No hay teclados.</p>
+                  {% endfor %}
               </div>
-              {% empty %}
-              <p>No hay productos de este tipo.</p>
-              {% endfor %}
           </div>
-      </div>
-
-      <!-- Sección de Teclados -->
-      <div id="teclados" class="section-container">
-          <h2 class="mb-4">Teclados</h2>
-          <div class="row">
-              {% for producto in teclados %}
-              <div class="col-md-4">
-                  <div class="card product-card">
-                      <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
-                      <div class="card-body">
-                          <h5 class="card-title">{{ producto.nombre }}</h5>
-                          <p class="card-text">{{ producto.descripcion }}</p>
-                          <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+          <!-- Cascos -->
+          <div class="sub-section">
+              <h3 class="sub-section-title">Cascos</h3>
+              <div class="row">
+                  {% for producto in cascos %}
+                  <div class="col-md-4">
+                      <div class="card product-card">
+                          <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+                          <div class="card-body">
+                              <h5 class="card-title">{{ producto.nombre }}</h5>
+                              <p class="card-text">{{ producto.descripcion }}</p>
+                              <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+                          </div>
                       </div>
                   </div>
+                  {% empty %}
+                  <p>No hay cascos.</p>
+                  {% endfor %}
               </div>
-              {% empty %}
-              <p>No hay productos de este tipo.</p>
-              {% endfor %}
-          </div>
-      </div>
-
-      <!-- Sección de Mandos -->
-      <div id="mandos" class="section-container">
-          <h2 class="mb-4">Mandos</h2>
-          <div class="row">
-              {% for producto in mandos %}
-              <div class="col-md-4">
-                  <div class="card product-card">
-                      <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
-                      <div class="card-body">
-                          <h5 class="card-title">{{ producto.nombre }}</h5>
-                          <p class="card-text">{{ producto.descripcion }}</p>
-                          <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
-                      </div>
-                  </div>
-              </div>
-              {% empty %}
-              <p>No hay productos de este tipo.</p>
-              {% endfor %}
           </div>
       </div>
 
-      <!-- Sección de Cascos -->
-      <div id="cascos" class="section-container">
-          <h2 class="mb-4">Cascos</h2>
-          <div class="row">
-              {% for producto in cascos %}
-              <div class="col-md-4">
-                  <div class="card product-card">
-                      <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
-                      <div class="card-body">
-                          <h5 class="card-title">{{ producto.nombre }}</h5>
-                          <p class="card-text">{{ producto.descripcion }}</p>
-                          <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+      <!-- Videojuegos: se muestran sus dos subcategorías -->
+      <div id="videojuegos" class="section-container">
+          <h2 class="mb-4">Videojuegos</h2>
+          <!-- Físicos -->
+          <div class="sub-section">
+              <h3 class="sub-section-title">Videojuegos Físicos</h3>
+              <div class="row">
+                  {% for producto in videojuegos_fisicos %}
+                  <div class="col-md-4">
+                      <div class="card product-card">
+                          <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+                          <div class="card-body">
+                              <h5 class="card-title">{{ producto.nombre }}</h5>
+                              <p class="card-text">{{ producto.descripcion }}</p>
+                              <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+                          </div>
                       </div>
                   </div>
+                  {% empty %}
+                  <p>No hay videojuegos físicos.</p>
+                  {% endfor %}
               </div>
-              {% empty %}
-              <p>No hay productos de este tipo.</p>
-              {% endfor %}
+          </div>
+          <!-- Digitales -->
+          <div class="sub-section">
+              <h3 class="sub-section-title">Videojuegos Digitales</h3>
+              <div class="row">
+                  {% for producto in videojuegos_digitales %}
+                  <div class="col-md-4">
+                      <div class="card product-card">
+                          <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+                          <div class="card-body">
+                              <h5 class="card-title">{{ producto.nombre }}</h5>
+                              <p class="card-text">{{ producto.descripcion }}</p>
+                              <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+                          </div>
+                      </div>
+                  </div>
+                  {% empty %}
+                  <p>No hay videojuegos digitales.</p>
+                  {% endfor %}
+              </div>
           </div>
       </div>
 
-      <!-- Sección de Otros -->
+      <!-- Hardware y Consolas: se muestran sus tres subcategorías -->
+      <div id="hardware" class="section-container">
+          <h2 class="mb-4">Hardware y Consolas</h2>
+          <!-- Consolas -->
+          <div class="sub-section">
+              <h3 class="sub-section-title">Consolas</h3>
+              <div class="row">
+                  {% for producto in consolas %}
+                  <div class="col-md-4">
+                      <div class="card product-card">
+                          <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+                          <div class="card-body">
+                              <h5 class="card-title">{{ producto.nombre }}</h5>
+                              <p class="card-text">{{ producto.descripcion }}</p>
+                              <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+                          </div>
+                      </div>
+                  </div>
+                  {% empty %}
+                  <p>No hay consolas.</p>
+                  {% endfor %}
+              </div>
+          </div>
+          <!-- PC -->
+          <div class="sub-section">
+              <h3 class="sub-section-title">PC</h3>
+              <div class="row">
+                  {% for producto in pc %}
+                  <div class="col-md-4">
+                      <div class="card product-card">
+                          <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+                          <div class="card-body">
+                              <h5 class="card-title">{{ producto.nombre }}</h5>
+                              <p class="card-text">{{ producto.descripcion }}</p>
+                              <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+                          </div>
+                      </div>
+                  </div>
+                  {% empty %}
+                  <p>No hay PC.</p>
+                  {% endfor %}
+              </div>
+          </div>
+          <!-- Componentes -->
+          <div class="sub-section">
+              <h3 class="sub-section-title">Componentes</h3>
+              <div class="row">
+                  {% for producto in componentes %}
+                  <div class="col-md-4">
+                      <div class="card product-card">
+                          <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+                          <div class="card-body">
+                              <h5 class="card-title">{{ producto.nombre }}</h5>
+                              <p class="card-text">{{ producto.descripcion }}</p>
+                              <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+                          </div>
+                      </div>
+                  </div>
+                  {% empty %}
+                  <p>No hay componentes.</p>
+                  {% endfor %}
+              </div>
+          </div>
+      </div>
+
+      <!-- Otros -->
       <div id="otros" class="section-container">
           <h2 class="mb-4">Otros</h2>
           <div class="row">
@@ -288,12 +357,17 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
       document.addEventListener('DOMContentLoaded', function() {
-          const navLinks = document.querySelectorAll('.nav-link');
-          navLinks.forEach(link => {
+          // Selecciona los enlaces que usen data-section, ya sean de navbar o de sub-secciones
+          const links = document.querySelectorAll('.nav-link, .dropdown-item');
+          links.forEach(link => {
               link.addEventListener('click', function(e) {
                   e.preventDefault();
-                  navLinks.forEach(l => l.parentElement.classList.remove('active'));
+                  // Remueve la clase active de todos los elementos del menú
+                  document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+                  // Agrega active al enlace clicado
                   this.parentElement.classList.add('active');
+
+                  // Oculta todas las secciones y muestra la seleccionada
                   const sectionId = this.getAttribute('data-section');
                   document.querySelectorAll('.section-container').forEach(section => section.classList.remove('active'));
                   document.getElementById(sectionId).classList.add('active');

@@ -1,8 +1,9 @@
 from django.contrib import admin
 from .models import Producto
+from .forms import ProductoForm
 
 @admin.register(Producto)
 class ProductoAdmin(admin.ModelAdmin):
-    list_display = ('nombre', 'tipo')
-    list_filter = ('tipo',)
-    search_fields = ('nombre', 'descripcion')
+    form = ProductoForm
+    list_display = ('nombre', 'categoria', 'subcategoria', 'destacado')
+    list_filter = ('categoria', 'subcategoria', 'destacado')
