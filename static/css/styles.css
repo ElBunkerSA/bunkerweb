@@ -196,3 +196,37 @@ body {
     border-color: #5580b7;
     color: white;
 }
+
+img.responsive-image {
+  height: 125px;
+}
+
+/* Estilos para pantallas pequeñas (móvil) */
+@media (max-width: 768px) {
+  img.responsive-image {
+   height: 50px;
+  }
+}
+
+
+img.responsive-image2 {
+  height: 150px;
+}
+
+/* Estilos para pantallas pequeñas (móvil) */
+@media (max-width: 768px) {
+  img.responsive-image2 {
+   height: 65px;
+  }
+}
+
+img.responsive-image3 {
+  height: 100px;
+}
+
+/* Estilos para pantallas pequeñas (móvil) */
+@media (max-width: 768px) {
+  img.responsive-image3 {
+   height: 60px;
+  }
+}
