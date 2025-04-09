@@ -1,7 +1,11 @@
 {% load static %}
 <!-- Destacados -->
 <div id="destacados" class="section-container active">
-    <h2 class="mb-4">Destacados</h2>
+<div class="separator">
+                <div class="separator-line"></div>
+                <img src="{% static 'images/destacados.png' %}" alt="Bunker Top" style="height:150px;">
+                <div class="separator-line"></div>
+              </div>
     <div class="row">
         {% for producto in destacados %}
         <div class="col-md-4">
@@ -22,10 +26,14 @@
 
 <!-- Periféricos -->
 <div id="perifericos" class="section-container">
-    <h2 class="mb-4">Periféricos</h2>
+
     <!-- Ratones -->
     <div id="ratones" class="sub-section">
-        <h3 class="sub-section-title">Ratones</h3>
+             <div class="separator">
+                <div class="separator-line"></div>
+                <img src="{% static 'images/ratones.png' %}" alt="Bunker Top" style="height:100px;">
+                <div class="separator-line"></div>
+              </div>
         <div class="row">
             {% for producto in ratones %}
             <div class="col-md-4">
@@ -45,7 +53,11 @@
     </div>
     <!-- Mandos -->
     <div id="mandos" class="sub-section">
-        <h3 class="sub-section-title">Mandos</h3>
+        <div class="separator">
+                <div class="separator-line"></div>
+                <img src="{% static 'images/mandos.png' %}" alt="Bunker Top" style="height:100px;">
+                <div class="separator-line"></div>
+              </div>
         <div class="row">
             {% for producto in mandos %}
             <div class="col-md-4">
@@ -65,7 +77,11 @@
     </div>
     <!-- Teclados -->
     <div id="teclados" class="sub-section">
-        <h3 class="sub-section-title">Teclados</h3>
+        <div class="separator">
+                <div class="separator-line"></div>
+                <img src="{% static 'images/teclados.png' %}" alt="Bunker Top" style="height:100px;">
+                <div class="separator-line"></div>
+              </div>
         <div class="row">
             {% for producto in teclados %}
             <div class="col-md-4">
@@ -85,7 +101,11 @@
     </div>
     <!-- Cascos -->
     <div id="cascos" class="sub-section">
-        <h3 class="sub-section-title">Cascos</h3>
+        <div class="separator">
+                <div class="separator-line"></div>
+                <img src="{% static 'images/cascos.png' %}" alt="Bunker Top" style="height:100px;">
+                <div class="separator-line"></div>
+              </div>
         <div class="row">
             {% for producto in cascos %}
             <div class="col-md-4">
@@ -107,10 +127,13 @@
 
 <!-- Videojuegos -->
 <div id="videojuegos" class="section-container">
-    <h2 class="mb-4">Videojuegos</h2>
     <!-- Físicos -->
     <div id="fisicos" class="sub-section">
-        <h3 class="sub-section-title">Videojuegos Físicos</h3>
+         <div class="separator">
+                <div class="separator-line"></div>
+                <img src="{% static 'images/fisicos.png' %}" alt="Bunker Top" style="height:100px;">
+                <div class="separator-line"></div>
+              </div>
         <div class="row">
             {% for producto in videojuegos_fisicos %}
             <div class="col-md-4">
@@ -130,7 +153,11 @@
     </div>
     <!-- Digitales -->
     <div id="digitales" class="sub-section">
-        <h3 class="sub-section-title">Videojuegos Digitales</h3>
+          <div class="separator">
+                <div class="separator-line"></div>
+                <img src="{% static 'images/digitales.png' %}" alt="Bunker Top" style="height:100px;">
+                <div class="separator-line"></div>
+              </div>
         <div class="row">
             {% for producto in videojuegos_digitales %}
             <div class="col-md-4">
@@ -152,10 +179,13 @@
 
 <!-- Hardware y Consolas -->
 <div id="hardware" class="section-container">
-    <h2 class="mb-4">Hardware y Consolas</h2>
     <!-- Consolas -->
     <div id="consolas" class="sub-section">
-        <h3 class="sub-section-title">Consolas</h3>
+          <div class="separator">
+                <div class="separator-line"></div>
+                <img src="{% static 'images/consolas.png' %}" alt="Bunker Top" style="height:100px;">
+                <div class="separator-line"></div>
+              </div>
         <div class="row">
             {% for producto in consolas %}
             <div class="col-md-4">
@@ -175,7 +205,11 @@
     </div>
     <!-- PC -->
     <div id="pc" class="sub-section">
-        <h3 class="sub-section-title">PC</h3>
+          <div class="separator">
+                <div class="separator-line"></div>
+                <img src="{% static 'images/pcs.png' %}" alt="Bunker Top" style="height:100px;">
+                <div class="separator-line"></div>
+              </div>
         <div class="row">
             {% for producto in pc %}
             <div class="col-md-4">
@@ -195,7 +229,11 @@
     </div>
     <!-- Componentes -->
     <div id="componentes" class="sub-section">
-        <h3 class="sub-section-title">Componentes</h3>
+          <div class="separator">
+                <div class="separator-line"></div>
+                <img src="{% static 'images/componentes.png' %}" alt="Bunker Top" style="height:100px;">
+                <div class="separator-line"></div>
+              </div>
         <div class="row">
             {% for producto in componentes %}
             <div class="col-md-4">
@@ -217,7 +255,11 @@
 
 <!-- Otros -->
 <div id="otros" class="section-container">
-    <h2 class="mb-4">Otros</h2>
+      <div class="separator">
+                <div class="separator-line"></div>
+                <img src="{% static 'images/otros.png' %}" alt="Bunker Top" style="height:100px;">
+                <div class="separator-line"></div>
+              </div>
     <div class="row">
         {% for producto in otros %}
         <div class="col-md-4">

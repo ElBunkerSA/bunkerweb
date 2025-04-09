@@ -164,3 +164,23 @@ body {
     font-size: 1.25rem;
     text-transform: uppercase;
 }
+
+    .separator {
+      display: flex;
+      align-items: center;
+      margin: 20px 0; /* Espaciado vertical, ajusta según necesidad */
+    }
+
+    .separator-line {
+        flex: 1;
+    height: 1px;
+    background-color: #cccccc4a;
+    }
+
+    .separator img {
+      margin: 0 10px; /* Espacio entre la imagen y las líneas */
+      /* Puedes ajustar el tamaño de la imagen si es necesario */
+      max-width: 100%;
+      height: auto;
+    }
+

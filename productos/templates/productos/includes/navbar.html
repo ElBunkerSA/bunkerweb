@@ -1,56 +1,64 @@
 {% load static %}
 <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container">
-         <a class="navbar-brand" href="#">
-            <img src="{% static 'images/logo1.png' %}" alt="Bunker Top" style="height:75px;">
-         </a>
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-             <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarNav">
-             <ul class="navbar-nav">
-                 <li class="nav-item">
-                     <a class="nav-link" href="#" data-section="destacados">Destacados</a>
-                 </li>
-                 <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="perifericosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                         Periféricos
-                     </a>
-                     <ul class="dropdown-menu" aria-labelledby="perifericosDropdown">
-                         <li><a class="dropdown-item" href="#" data-section="perifericos" data-sub="ratones">Ratones</a></li>
-                         <li><a class="dropdown-item" href="#" data-section="perifericos" data-sub="mandos">Mandos</a></li>
-                         <li><a class="dropdown-item" href="#" data-section="perifericos" data-sub="teclados">Teclados</a></li>
-                         <li><a class="dropdown-item" href="#" data-section="perifericos" data-sub="cascos">Cascos</a></li>
-                         <li><a class="dropdown-item" href="#" data-section="perifericos">Ver todos</a></li>
-                     </ul>
-                 </li>
-                 <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="videojuegosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                         Videojuegos
-                     </a>
-                     <ul class="dropdown-menu" aria-labelledby="videojuegosDropdown">
-                         <li><a class="dropdown-item" href="#" data-section="videojuegos" data-sub="fisicos">Físicos</a></li>
-                         <li><a class="dropdown-item" href="#" data-section="videojuegos" data-sub="digitales">Digitales</a></li>
-                         <li><a class="dropdown-item" href="#" data-section="videojuegos">Ver todos</a></li>
-                     </ul>
-                 </li>
-                 <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="hardwareDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                         Hardware y Consolas
-                     </a>
-                     <ul class="dropdown-menu" aria-labelledby="hardwareDropdown">
-                         <li><a class="dropdown-item" href="#" data-section="hardware" data-sub="consolas">Consolas</a></li>
-                         <li><a class="dropdown-item" href="#" data-section="hardware" data-sub="pc">PC</a></li>
-                         <li><a class="dropdown-item" href="#" data-section="hardware" data-sub="componentes">Componentes</a></li>
-                         <li><a class="dropdown-item" href="#" data-section="hardware">Ver todos</a></li>
-                     </ul>
-                 </li>
-                 <li class="nav-item">
-                     <a class="nav-link" href="#" data-section="otros">Otros</a>
-                 </li>
-             </ul>
-             <div class="social-icons">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="{% static 'images/logo1.png' %}" alt="Bunker Top" style="height:75px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Enlace simple para Destacados -->
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-section="destacados">Destacados</a>
+        </li>
+        <!-- Dropdown para Periféricos -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="perifericosDropdown" role="button" data-bs-toggle="dropdown"
+             aria-expanded="false" data-section="perifericos">
+            Periféricos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="perifericosDropdown">
+            <li><a class="dropdown-item" href="#" data-section="perifericos" data-sub="ratones">Ratones</a></li>
+            <li><a class="dropdown-item" href="#" data-section="perifericos" data-sub="mandos">Mandos</a></li>
+            <li><a class="dropdown-item" href="#" data-section="perifericos" data-sub="teclados">Teclados</a></li>
+            <li><a class="dropdown-item" href="#" data-section="perifericos" data-sub="cascos">Cascos</a></li>
+            <li><a class="dropdown-item" href="#" data-section="perifericos">Ver todos</a></li>
+          </ul>
+        </li>
+        <!-- Dropdown para Videojuegos -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="videojuegosDropdown" role="button" data-bs-toggle="dropdown"
+             aria-expanded="false" data-section="videojuegos">
+            Videojuegos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="videojuegosDropdown">
+            <li><a class="dropdown-item" href="#" data-section="videojuegos" data-sub="fisicos">Físicos</a></li>
+            <li><a class="dropdown-item" href="#" data-section="videojuegos" data-sub="digitales">Digitales</a></li>
+            <li><a class="dropdown-item" href="#" data-section="videojuegos">Ver todos</a></li>
+          </ul>
+        </li>
+        <!-- Dropdown para Hardware y Consolas -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="hardwareDropdown" role="button" data-bs-toggle="dropdown"
+             aria-expanded="false" data-section="hardware">
+            Hardware y Consolas
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="hardwareDropdown">
+            <li><a class="dropdown-item" href="#" data-section="hardware" data-sub="consolas">Consolas</a></li>
+            <li><a class="dropdown-item" href="#" data-section="hardware" data-sub="pc">PC</a></li>
+            <li><a class="dropdown-item" href="#" data-section="hardware" data-sub="componentes">Componentes</a></li>
+            <li><a class="dropdown-item" href="#" data-section="hardware">Ver todos</a></li>
+          </ul>
+        </li>
+        <!-- Enlace simple para Otros -->
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-section="otros">Otros</a>
+        </li>
+      </ul>
+      <div class="social-icons">
               <!-- Instagram SVG -->
               <a href="https://www.instagram.com/elbunkersa" class="social-icon instagram" aria-label="Instagram" target="_blank">
                   <svg viewBox="0 0 448 512">
@@ -72,6 +80,6 @@
                   </svg>
               </a>
           </div>
-         </div>
     </div>
+  </div>
 </nav>

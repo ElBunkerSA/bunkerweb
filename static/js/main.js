@@ -35,6 +35,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+// Manejar el clic en el enlace principal de la categoría (dropdown-toggle)
+const dropdownToggles = document.querySelectorAll('.nav-item.dropdown .dropdown-toggle');
+dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+        // Evitamos el comportamiento por defecto (abrir el menú)
+        e.preventDefault();
+        // Obtenemos el valor de data-section del enlace (que ya agregamos en el HTML)
+        const sectionId = this.getAttribute('data-section');
+        if (sectionId) {
+            // Actualizamos los enlaces activos
+            document.querySelectorAll('.nav-link').forEach(item => item.classList.remove('active'));
+            this.classList.add('active');
+            // Mostramos la sección correspondiente (la categoría completa)
+            document.querySelectorAll('.section-container').forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    });
+});
+
+
     // Manejo para los ítems del dropdown (con data-sub cuando corresponde)
     const dropdownItems = document.querySelectorAll('.dropdown-item');
     dropdownItems.forEach(item => {
