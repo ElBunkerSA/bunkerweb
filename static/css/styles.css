@@ -191,3 +191,8 @@ body {
       height: auto;
     }
 
+.btn-outline-dark:hover {
+    background-color: #5580b7;
+    border-color: #5580b7;
+    color: white;
+}
