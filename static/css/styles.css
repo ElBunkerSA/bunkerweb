@@ -3,7 +3,6 @@ body {
 }
 
 .navbar {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     padding: 20px 0;
     background-color: #ffffff;
 }
@@ -25,12 +24,13 @@ body {
 }
 
 .nav-link {
-    font-weight: 500;
+    font-weight: 900;
     font-size: 14px;
-    color: #212529;
+    color: #000000;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 10px 15px !important;
+    text-shadow: 0 0 15px #ffffff;
     transition: all 0.3s ease;
 }
 
@@ -249,3 +249,35 @@ img.responsive-image3 {
     text-align: center;
     margin-top: 10px;
 }
+
+
+  /* Posición relativa para el navbar contenedor */
+  .navbar {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: none; /* Quitamos el fondo del navbar principal */
+  }
+
+  /* Pseudo-elemento para el fondo con efecto de difuminado */
+  .navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Colocamos detrás del contenido */
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 100%),
+                url("https://yt3.googleusercontent.com/FX8ZlO_ShK87lp7K7C3B1ZCC2pnNFCh37321IjEL751sZLSN5ZpxeJBhcWSQrBeT6OwNCJzD=w2276-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj");
+    background-size: cover;
+    background-position: center;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+  }
+
+  /* Aseguramos que el contenido esté por encima del fondo */
+  .navbar .container {
+    position: relative;
+    z-index: 1;
+  }
