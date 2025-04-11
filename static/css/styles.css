@@ -230,3 +230,22 @@ img.responsive-image3 {
    height: 60px;
   }
 }
+
+
+.platform-info {
+    border-bottom: 2px solid #5580b7;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    font-size: 0.9rem;
+    color: #5580b7;
+}
+.platform-info .descuento {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+
+.btn-container {
+    text-align: center;
+    margin-top: 10px;
+}

@@ -1,279 +1,389 @@
 {% load static %}
 <!-- Destacados -->
 <div id="destacados" class="section-container active">
-<div class="separator">
-                <div class="separator-line"></div>
-                <img src="{% static 'images/destacados.png' %}" alt="Bunker Top" class="responsive-image2">
-                <div class="separator-line"></div>
-              </div>
-    <div class="row">
-        {% for producto in destacados %}
-        <div class="col-md-4">
-            <div class="card product-card">
-                <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
-                <div class="card-body">
-                    <h5 class="card-title">{{ producto.nombre }}</h5>
-                    <p class="card-text">{{ producto.descripcion }}</p>
-                    <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
-                </div>
+  <div class="separator">
+    <div class="separator-line"></div>
+    <img src="{% static 'images/destacados.png' %}" alt="Destacados" class="responsive-image2">
+    <div class="separator-line"></div>
+  </div>
+  <div class="row">
+    {% for producto in destacados %}
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ producto.nombre }}</h5>
+            <div class="platform-info">
+              {% if producto.plataformas %}
+                <span class="platforms">{{ producto.get_plataformas_display }}</span>
+              {% endif %}
+              {% if producto.descuento %}
+                <span class="descuento">{{ producto.descuento }}% de descuento</span>
+              {% endif %}
             </div>
+            <p class="card-text">{{ producto.descripcion }}</p>
+            <div class="btn-container text-center">
+              <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+            </div>
+          </div>
         </div>
-        {% empty %}
-        <p>No hay productos destacados.</p>
-        {% endfor %}
-    </div>
+      </div>
+    {% empty %}
+      <p>No hay productos destacados.</p>
+    {% endfor %}
+  </div>
 </div>
 
 <!-- Periféricos -->
 <div id="perifericos" class="section-container">
-
-    <!-- Ratones -->
-    <div id="ratones" class="sub-section">
-             <div class="separator">
-                <div class="separator-line"></div>
-                <img src="{% static 'images/ratones.png' %}" alt="Bunker Top" class="responsive-image3">
-                <div class="separator-line"></div>
-              </div>
-        <div class="row">
-            {% for producto in ratones %}
-            <div class="col-md-4">
-                <div class="card product-card">
-                    <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ producto.nombre }}</h5>
-                        <p class="card-text">{{ producto.descripcion }}</p>
-                        <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
-                    </div>
-                </div>
-            </div>
-            {% empty %}
-            <p>No hay ratones.</p>
-            {% endfor %}
-        </div>
+  <h2 class="mb-4">Periféricos</h2>
+  <!-- Ratones -->
+  <div id="ratones" class="sub-section">
+    <div class="separator">
+      <div class="separator-line"></div>
+      <img src="{% static 'images/ratones.png' %}" alt="Ratones" class="responsive-image3">
+      <div class="separator-line"></div>
     </div>
-    <!-- Mandos -->
-    <div id="mandos" class="sub-section">
-        <div class="separator">
-                <div class="separator-line"></div>
-                <img src="{% static 'images/mandos.png' %}" alt="Bunker Top" class="responsive-image3">
-                <div class="separator-line"></div>
+    <div class="row">
+      {% for producto in ratones %}
+        <div class="col-md-4">
+          <div class="card product-card">
+            <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ producto.nombre }}</h5>
+              <div class="platform-info">
+                {% if producto.plataformas %}
+                  <span class="platforms">{{ producto.get_plataformas_display }}</span>
+                {% endif %}
+                {% if producto.descuento %}
+                  <span class="descuento">{{ producto.descuento }}% de descuento</span>
+                {% endif %}
               </div>
-        <div class="row">
-            {% for producto in mandos %}
-            <div class="col-md-4">
-                <div class="card product-card">
-                    <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ producto.nombre }}</h5>
-                        <p class="card-text">{{ producto.descripcion }}</p>
-                        <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
-                    </div>
-                </div>
-            </div>
-            {% empty %}
-            <p>No hay mandos.</p>
-            {% endfor %}
-        </div>
-    </div>
-    <!-- Teclados -->
-    <div id="teclados" class="sub-section">
-        <div class="separator">
-                <div class="separator-line"></div>
-                <img src="{% static 'images/teclados.png' %}" alt="Bunker Top" class="responsive-image3">
-                <div class="separator-line"></div>
+              <p class="card-text">{{ producto.descripcion }}</p>
+              <div class="btn-container text-center">
+                <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
               </div>
-        <div class="row">
-            {% for producto in teclados %}
-            <div class="col-md-4">
-                <div class="card product-card">
-                    <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ producto.nombre }}</h5>
-                        <p class="card-text">{{ producto.descripcion }}</p>
-                        <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
-                    </div>
-                </div>
             </div>
-            {% empty %}
-            <p>No hay teclados.</p>
-            {% endfor %}
+          </div>
         </div>
+      {% empty %}
+        <p>No hay ratones.</p>
+      {% endfor %}
     </div>
-    <!-- Cascos -->
-    <div id="cascos" class="sub-section">
-        <div class="separator">
-                <div class="separator-line"></div>
-                <img src="{% static 'images/cascos.png' %}" alt="Bunker Top" class="responsive-image3">
-                <div class="separator-line"></div>
+  </div>
+  <!-- Mandos -->
+  <div id="mandos" class="sub-section">
+    <div class="separator">
+      <div class="separator-line"></div>
+      <img src="{% static 'images/mandos.png' %}" alt="Mandos" class="responsive-image3">
+      <div class="separator-line"></div>
+    </div>
+    <div class="row">
+      {% for producto in mandos %}
+        <div class="col-md-4">
+          <div class="card product-card">
+            <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ producto.nombre }}</h5>
+              <div class="platform-info">
+                {% if producto.plataformas %}
+                  <span class="platforms">{{ producto.get_plataformas_display }}</span>
+                {% endif %}
+                {% if producto.descuento %}
+                  <span class="descuento">{{ producto.descuento }}% de descuento</span>
+                {% endif %}
               </div>
-        <div class="row">
-            {% for producto in cascos %}
-            <div class="col-md-4">
-                <div class="card product-card">
-                    <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ producto.nombre }}</h5>
-                        <p class="card-text">{{ producto.descripcion }}</p>
-                        <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
-                    </div>
-                </div>
+              <p class="card-text">{{ producto.descripcion }}</p>
+              <div class="btn-container text-center">
+                <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+              </div>
             </div>
-            {% empty %}
-            <p>No hay cascos.</p>
-            {% endfor %}
+          </div>
         </div>
+      {% empty %}
+        <p>No hay mandos.</p>
+      {% endfor %}
     </div>
+  </div>
+  <!-- Teclados -->
+  <div id="teclados" class="sub-section">
+    <div class="separator">
+      <div class="separator-line"></div>
+      <img src="{% static 'images/teclados.png' %}" alt="Teclados" class="responsive-image3">
+      <div class="separator-line"></div>
+    </div>
+    <div class="row">
+      {% for producto in teclados %}
+        <div class="col-md-4">
+          <div class="card product-card">
+            <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ producto.nombre }}</h5>
+              <div class="platform-info">
+                {% if producto.plataformas %}
+                  <span class="platforms">{{ producto.get_plataformas_display }}</span>
+                {% endif %}
+                {% if producto.descuento %}
+                  <span class="descuento">{{ producto.descuento }}% de descuento</span>
+                {% endif %}
+              </div>
+              <p class="card-text">{{ producto.descripcion }}</p>
+              <div class="btn-container text-center">
+                <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <p>No hay teclados.</p>
+      {% endfor %}
+    </div>
+  </div>
+  <!-- Cascos -->
+  <div id="cascos" class="sub-section">
+    <div class="separator">
+      <div class="separator-line"></div>
+      <img src="{% static 'images/cascos.png' %}" alt="Cascos" class="responsive-image3">
+      <div class="separator-line"></div>
+    </div>
+    <div class="row">
+      {% for producto in cascos %}
+        <div class="col-md-4">
+          <div class="card product-card">
+            <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ producto.nombre }}</h5>
+              <div class="platform-info">
+                {% if producto.plataformas %}
+                  <span class="platforms">{{ producto.get_plataformas_display }}</span>
+                {% endif %}
+                {% if producto.descuento %}
+                  <span class="descuento">{{ producto.descuento }}% de descuento</span>
+                {% endif %}
+              </div>
+              <p class="card-text">{{ producto.descripcion }}</p>
+              <div class="btn-container text-center">
+                <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <p>No hay cascos.</p>
+      {% endfor %}
+    </div>
+  </div>
 </div>
 
 <!-- Videojuegos -->
 <div id="videojuegos" class="section-container">
-    <!-- Físicos -->
-    <div id="fisicos" class="sub-section">
-         <div class="separator">
-                <div class="separator-line"></div>
-                <img src="{% static 'images/fisicos.png' %}" alt="Bunker Top" class="responsive-image3">
-                <div class="separator-line"></div>
-              </div>
-        <div class="row">
-            {% for producto in videojuegos_fisicos %}
-            <div class="col-md-4">
-                <div class="card product-card">
-                    <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ producto.nombre }}</h5>
-                        <p class="card-text">{{ producto.descripcion }}</p>
-                        <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
-                    </div>
-                </div>
-            </div>
-            {% empty %}
-            <p>No hay videojuegos físicos.</p>
-            {% endfor %}
-        </div>
+  <!-- Físicos -->
+  <div id="fisicos" class="sub-section">
+    <div class="separator">
+      <div class="separator-line"></div>
+      <img src="{% static 'images/fisicos.png' %}" alt="Videojuegos Físicos" class="responsive-image3">
+      <div class="separator-line"></div>
     </div>
-    <!-- Digitales -->
-    <div id="digitales" class="sub-section">
-          <div class="separator">
-                <div class="separator-line"></div>
-                <img src="{% static 'images/digitales.png' %}" alt="Bunker Top" class="responsive-image3">
-                <div class="separator-line"></div>
+    <div class="row">
+      {% for producto in videojuegos_fisicos %}
+        <div class="col-md-4">
+          <div class="card product-card">
+            <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ producto.nombre }}</h5>
+              <div class="platform-info">
+                {% if producto.plataformas %}
+                  <span class="platforms">{{ producto.get_plataformas_display }}</span>
+                {% endif %}
+                {% if producto.descuento %}
+                  <span class="descuento">{{ producto.descuento }}% de descuento</span>
+                {% endif %}
               </div>
-        <div class="row">
-            {% for producto in videojuegos_digitales %}
-            <div class="col-md-4">
-                <div class="card product-card">
-                    <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ producto.nombre }}</h5>
-                        <p class="card-text">{{ producto.descripcion }}</p>
-                        <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
-                    </div>
-                </div>
+              <p class="card-text">{{ producto.descripcion }}</p>
+              <div class="btn-container text-center">
+                <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+              </div>
             </div>
-            {% empty %}
-            <p>No hay videojuegos digitales.</p>
-            {% endfor %}
+          </div>
         </div>
+      {% empty %}
+        <p>No hay videojuegos físicos.</p>
+      {% endfor %}
     </div>
+  </div>
+  <!-- Digitales -->
+  <div id="digitales" class="sub-section">
+    <div class="separator">
+      <div class="separator-line"></div>
+      <img src="{% static 'images/digitales.png' %}" alt="Videojuegos Digitales" class="responsive-image3">
+      <div class="separator-line"></div>
+    </div>
+    <div class="row">
+      {% for producto in videojuegos_digitales %}
+        <div class="col-md-4">
+          <div class="card product-card">
+            <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ producto.nombre }}</h5>
+              <div class="platform-info">
+                {% if producto.plataformas %}
+                  <span class="platforms">{{ producto.get_plataformas_display }}</span>
+                {% endif %}
+                {% if producto.descuento %}
+                  <span class="descuento">{{ producto.descuento }}% de descuento</span>
+                {% endif %}
+              </div>
+              <p class="card-text">{{ producto.descripcion }}</p>
+              <div class="btn-container text-center">
+                <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <p>No hay videojuegos digitales.</p>
+      {% endfor %}
+    </div>
+  </div>
 </div>
 
 <!-- Hardware y Consolas -->
 <div id="hardware" class="section-container">
-    <!-- Consolas -->
-    <div id="consolas" class="sub-section">
-          <div class="separator">
-                <div class="separator-line"></div>
-                <img src="{% static 'images/consolas.png' %}" alt="Bunker Top" class="responsive-image3">
-                <div class="separator-line"></div>
-              </div>
-        <div class="row">
-            {% for producto in consolas %}
-            <div class="col-md-4">
-                <div class="card product-card">
-                    <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ producto.nombre }}</h5>
-                        <p class="card-text">{{ producto.descripcion }}</p>
-                        <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
-                    </div>
-                </div>
-            </div>
-            {% empty %}
-            <p>No hay consolas.</p>
-            {% endfor %}
-        </div>
+  <!-- Consolas -->
+  <div id="consolas" class="sub-section">
+    <div class="separator">
+      <div class="separator-line"></div>
+      <img src="{% static 'images/consolas.png' %}" alt="Consolas" class="responsive-image3">
+      <div class="separator-line"></div>
     </div>
-    <!-- PC -->
-    <div id="pc" class="sub-section">
-          <div class="separator">
-                <div class="separator-line"></div>
-                <img src="{% static 'images/pcs.png' %}" alt="Bunker Top" class="responsive-image3">
-                <div class="separator-line"></div>
+    <div class="row">
+      {% for producto in consolas %}
+        <div class="col-md-4">
+          <div class="card product-card">
+            <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ producto.nombre }}</h5>
+              <div class="platform-info">
+                {% if producto.plataformas %}
+                  <span class="platforms">{{ producto.get_plataformas_display }}</span>
+                {% endif %}
+                {% if producto.descuento %}
+                  <span class="descuento">{{ producto.descuento }}% de descuento</span>
+                {% endif %}
               </div>
-        <div class="row">
-            {% for producto in pc %}
-            <div class="col-md-4">
-                <div class="card product-card">
-                    <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ producto.nombre }}</h5>
-                        <p class="card-text">{{ producto.descripcion }}</p>
-                        <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
-                    </div>
-                </div>
-            </div>
-            {% empty %}
-            <p>No hay PC.</p>
-            {% endfor %}
-        </div>
-    </div>
-    <!-- Componentes -->
-    <div id="componentes" class="sub-section">
-          <div class="separator">
-                <div class="separator-line"></div>
-                <img src="{% static 'images/componentes.png' %}" alt="Bunker Top" class="responsive-image3">
-                <div class="separator-line"></div>
+              <p class="card-text">{{ producto.descripcion }}</p>
+              <div class="btn-container text-center">
+                <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
               </div>
-        <div class="row">
-            {% for producto in componentes %}
-            <div class="col-md-4">
-                <div class="card product-card">
-                    <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ producto.nombre }}</h5>
-                        <p class="card-text">{{ producto.descripcion }}</p>
-                        <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
-                    </div>
-                </div>
             </div>
-            {% empty %}
-            <p>No hay componentes.</p>
-            {% endfor %}
+          </div>
         </div>
+      {% empty %}
+        <p>No hay consolas.</p>
+      {% endfor %}
     </div>
+  </div>
+  <!-- PC -->
+  <div id="pc" class="sub-section">
+    <div class="separator">
+      <div class="separator-line"></div>
+      <img src="{% static 'images/pcs.png' %}" alt="PC" class="responsive-image3">
+      <div class="separator-line"></div>
+    </div>
+    <div class="row">
+      {% for producto in pc %}
+        <div class="col-md-4">
+          <div class="card product-card">
+            <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ producto.nombre }}</h5>
+              <div class="platform-info">
+                {% if producto.plataformas %}
+                  <span class="platforms">{{ producto.get_plataformas_display }}</span>
+                {% endif %}
+                {% if producto.descuento %}
+                  <span class="descuento">{{ producto.descuento }}% de descuento</span>
+                {% endif %}
+              </div>
+              <p class="card-text">{{ producto.descripcion }}</p>
+              <div class="btn-container text-center">
+                <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <p>No hay PC.</p>
+      {% endfor %}
+    </div>
+  </div>
+  <!-- Componentes -->
+  <div id="componentes" class="sub-section">
+    <div class="separator">
+      <div class="separator-line"></div>
+      <img src="{% static 'images/componentes.png' %}" alt="Componentes" class="responsive-image3">
+      <div class="separator-line"></div>
+    </div>
+    <div class="row">
+      {% for producto in componentes %}
+        <div class="col-md-4">
+          <div class="card product-card">
+            <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ producto.nombre }}</h5>
+              <div class="platform-info">
+                {% if producto.plataformas %}
+                  <span class="platforms">{{ producto.get_plataformas_display }}</span>
+                {% endif %}
+                {% if producto.descuento %}
+                  <span class="descuento">{{ producto.descuento }}% de descuento</span>
+                {% endif %}
+              </div>
+              <p class="card-text">{{ producto.descripcion }}</p>
+              <div class="btn-container text-center">
+                <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <p>No hay componentes.</p>
+      {% endfor %}
+    </div>
+  </div>
 </div>
 
 <!-- Otros -->
 <div id="otros" class="section-container">
-      <div class="separator">
-                <div class="separator-line"></div>
-                <img src="{% static 'images/otros.png' %}" alt="Bunker Top" class="responsive-image3">
-                <div class="separator-line"></div>
-              </div>
-    <div class="row">
-        {% for producto in otros %}
-        <div class="col-md-4">
-            <div class="card product-card">
-                <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
-                <div class="card-body">
-                    <h5 class="card-title">{{ producto.nombre }}</h5>
-                    <p class="card-text">{{ producto.descripcion }}</p>
-                    <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
-                </div>
+  <div class="separator">
+    <div class="separator-line"></div>
+    <img src="{% static 'images/otros.png' %}" alt="Otros" class="responsive-image3">
+    <div class="separator-line"></div>
+  </div>
+  <div class="row">
+    {% for producto in otros %}
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="{{ producto.imagen_url }}" class="card-img-top" alt="{{ producto.nombre }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ producto.nombre }}</h5>
+            <div class="platform-info">
+              {% if producto.plataformas %}
+                <span class="platforms">{{ producto.get_plataformas_display }}</span>
+              {% endif %}
+              {% if producto.descuento %}
+                <span class="descuento">{{ producto.descuento }}% de descuento</span>
+              {% endif %}
             </div>
+            <p class="card-text">{{ producto.descripcion }}</p>
+            <div class="btn-container text-center">
+              <a href="{{ producto.afiliado_url }}" class="btn btn-outline-dark">Ver producto</a>
+            </div>
+          </div>
         </div>
-        {% empty %}
-        <p>No hay productos en esta categoría.</p>
-        {% endfor %}
-    </div>
+      </div>
+    {% empty %}
+      <p>No hay productos en esta categoría.</p>
+    {% endfor %}
+  </div>
 </div>
