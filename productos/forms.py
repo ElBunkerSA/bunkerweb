@@ -14,7 +14,7 @@ class ProductoForm(forms.ModelForm):
         # Definimos las asociaciones válidas entre categoría y subcategoría
         valid_mapping = {
             'perifericos': ['ratones', 'mandos', 'teclados', 'cascos'],
-            'videojuegos': ['fisico', 'digital'],
+            'videojuegos': ['fisicos', 'digitales'],
             'hardware': ['consolas', 'pc', 'componentes'],
             'otros': [None, '']
         }
