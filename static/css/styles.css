@@ -2,6 +2,11 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+@font-face {
+  font-family: 'Akira';
+  src: url("/static/fonts/akira.otf") format("opentype");
+}
+
 .navbar {
     padding: 20px 0;
     background-color: #ffffff;
@@ -25,13 +30,15 @@ body {
 
 .nav-link {
     font-weight: 600;
-    font-size: 14px;
-    color: #000000;
+    font-size: 17px;
+    color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 10px 15px !important;
-    text-shadow: 0 0 15px #ffffff;
     transition: all 0.3s ease;
+    font-family: 'akira', sans-serif;
+    text-shadow: 0 0 5px #000000;
+    letter-spacing: -1px;
 }
 
 .nav-link:hover,
@@ -281,3 +288,5 @@ img.responsive-image3 {
     position: relative;
     z-index: 1;
   }
+
+
