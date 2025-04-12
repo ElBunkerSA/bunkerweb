@@ -15,7 +15,7 @@ body {
 .navbar-brand {
     font-weight: 800;
     font-size: 1.8rem;
-    color: #5580b7;
+    color: #8e2bdc;
     position: relative;
 }
 
@@ -43,7 +43,8 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-    color: #5580b7;
+    color: #8e2bdc !important;
+    text-shadow: 0 0 5px #ffffff !important;
 }
 
 .dropdown-menu {
@@ -64,7 +65,7 @@ body {
 .dropdown-item:hover,
 .dropdown-item:focus {
     background-color: #f8f9fa;
-    color: #5580b7;
+    color: #8e2bdc;
 }
 
 .social-icons {
@@ -199,8 +200,8 @@ body {
     }
 
 .btn-outline-dark:hover {
-    background-color: #5580b7;
-    border-color: #5580b7;
+    background-color: #8e2bdc;
+    border-color: #8e2bdc;
     color: white;
 }
 
@@ -240,11 +241,11 @@ img.responsive-image3 {
 
 
 .platform-info {
-    border-bottom: 2px solid #5580b7;
+    border-bottom: 2px solid #8e2bdc;
     margin-bottom: 10px;
     padding-bottom: 5px;
     font-size: 0.9rem;
-    color: #5580b7;
+    color: #8e2bdc;
 }
 .platform-info .descuento {
     margin-left: 10px;
