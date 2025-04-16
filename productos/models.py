@@ -48,7 +48,7 @@ class Producto(models.Model):
     afiliado_url = models.URLField(verbose_name="URL de afiliado")
     descripcion = models.TextField(verbose_name="Descripción (por qué recomiendas el producto)")
     destacado = models.BooleanField(default=False)
-    orden = models.PositiveIntegerField(default=0, help_text="Número de orden; menor se muestra primero")
+    orden = models.PositiveIntegerField(default=50, help_text="Número de orden; menor se muestra primero")
     # Nuevos campos:
     plataformas = MultiSelectField(choices=PLATAFORMA_CHOICES, blank=True, null=True, help_text="Selecciona las plataformas para las cuales es válido el producto")
     descuento = models.IntegerField(
