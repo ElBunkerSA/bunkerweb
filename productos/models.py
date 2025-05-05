@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 from django.core.validators import MinValueValidator, MaxValueValidator
 from multiselectfield import MultiSelectField  # Importa el campo de selección múltiple
 
@@ -49,7 +50,7 @@ class Producto(models.Model):
     descripcion = models.TextField(verbose_name="Descripción (por qué recomiendas el producto)")
     destacado = models.BooleanField(default=False)
     orden = models.PositiveIntegerField(default=50, help_text="Número de orden; menor se muestra primero")
-    # Nuevos campos:
+    fecha_creacion = models.DateTimeField(default=timezone.now, editable=True)
     plataformas = MultiSelectField(choices=PLATAFORMA_CHOICES, blank=True, null=True, help_text="Selecciona las plataformas para las cuales es válido el producto")
     descuento = models.IntegerField(
         default=0,
